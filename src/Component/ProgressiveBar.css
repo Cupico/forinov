@@ -22,16 +22,16 @@
 .progress ul li::before {
   cursor: pointer;
   content: "";
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   line-height: 30px;
   text-align: center;
-  left: -15px;
+  left: -10px;
   background-color: #ffffff; /* Default Circle Color */
   border: solid 5px #ffffff; /* Default Circle Color */
   position: absolute;
   display: block;
-  top: -10px;
+  top: -4px;
   margin-right: auto;
   margin-left: auto;
   z-index: -1;
