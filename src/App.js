@@ -119,7 +119,7 @@ function App() {
                   style={{ marginLeft: "1.5%" }}
                 ></i>
               </p>
-              <div style={{width:'96%'}}>
+              <div style={{width:'100%'}}>
               <ProgressiveBar />
               </div>
             </div>
