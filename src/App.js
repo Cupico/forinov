@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 import ProgressiveBar from "./Component/ProgressiveBar";
 
+const description =
+  "Jubiwee est une application web qui mesure automatiquement le ressenti des collaborateurs, détecte les signaux faibles et populations à risque. Elle génère également des plans d’actions pour donner aux managers les meilleures actions pour réduire le turnover, l’absentéisme et améliorer l’engagement dans leur équipe";
+
 function App() {
+  const [infos, setInfo] = useState();
+
+  useEffect(() => {
+    setInfo(description);
+  }, []);
+
   return (
     <div className="App">
       <div className="profil-container">
@@ -28,99 +37,57 @@ function App() {
                 <div className="point"></div>
               </button>
             </div>
-            <div style={{ height: "20px" }} className="name">
+            <div className="name">
               <p>Jubiwee</p>
             </div>
-            <div style={{ display: "flex", height: "40px" }}>
+            <div className="info-social-media">
               <p>
                 <i className="fas fa-map-marker-alt"></i>
               </p>
-              <p style={{ marginLeft: "1.5%" }}>Paris, FR</p>
-              <p style={{ marginLeft: "5%" }}>
+              <p className="localisation">Paris, FR</p>
+              <p className="External-Website">
                 <i className="fas fa-globe"></i>
               </p>
-              <p
-                style={{
-                  marginLeft: "1.5%",
-                  textDecoration: "underline white",
-                }}
-              >
-                www.demo.com
-              </p>
-              <ul
-                style={{
-                  marginLeft: "2%",
-                  width: "15%",
-                  listStyle: "none",
-                  listStyleType: "none",
-                  display: "flex",
-                  paddingTop: "3px",
-                }}
-              >
+              <p className="Website-Name-Copy">www.demo.com</p>
+              <ul>
                 <li className="fab fa-facebook-f" />
-                <li
-                  style={{
-                    marginLeft: "15%",
-                  }}
-                  className="fab fa-twitter"
-                />
-                <li
-                  style={{
-                    marginLeft: "15%",
-                  }}
-                  className="fab fa-linkedin"
-                />
-                <li
-                  style={{
-                    marginLeft: "15%",
-                  }}
-                  className="cb"
-                />
+                <li className="fab fa-twitter" />
+                <li className="fab fa-linkedin" />
+                <li className="cb" />
               </ul>
             </div>
-            <div style={{ width: "82%" }}>
-              <p style={{}}>
-                Jubiwee est une application web qui mesure automatiquement le
-                ressenti des collaborateurs, détecte les signaux faibles et
-                populations à risque. Elle génère également des plans d’actions
-                pour donner aux managers les meilleures actions pour réduire le
-                turnover, l’absentéisme et améliorer l’engagement dans leur
-                équipe.
+            <div className="description-profil">
+              <p>
+                {infos}
               </p>
             </div>
-            <div style={{ height: "29px" }}>
-              <div className="filters">
+            <div className="content-tag">
+              <div className="filters-ressource">
                 <p>Ressources humaines</p>
               </div>
             </div>
             <br />
-            <div>
+            <div className="sous-filters">
               <div className="filters">
                 <p>Software</p>
               </div>
-              <div className="filters" style={{ marginLeft: "1%" }}>
+              <div className="filters HR">
                 <p>HR</p>
               </div>
-              <div className="container-buttons-suivre-public"
-              >
+              <div className="container-buttons-suivre-public">
                 <button className="filters-suivre">Suivre</button>
-                <button className="filters-profil" style={{ marginLeft: "1%" }}>
-                  Profil public
-                </button>
-                <i className="fas fa-info-circle" style={{ margin: "0px 7px" }}></i>
+                <button className="filters-profil">Profil public</button>
+                <i className="fas fa-info-circle"></i>
               </div>
             </div>
             <div className="separation"></div>
             <div className="step-bar">
               <p>
                 Collaboration en discussion - POC{" "}
-                <i
-                  className="fas fa-caret-right"
-                  style={{ marginLeft: "1.5%" }}
-                ></i>
+                <i className="fas fa-caret-right"></i>
               </p>
-              <div style={{width:'100%'}}>
-              <ProgressiveBar />
+              <div className="container-step-bar">
+                <ProgressiveBar />
               </div>
             </div>
           </div>

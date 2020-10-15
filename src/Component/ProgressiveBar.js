@@ -42,6 +42,7 @@ function ProgressiveBar() {
             onClick={nextStep}
             onMouseEnter={mouseEnter}
             onMouseLeave={mouseLeave}
+            key={i}
           >
             {date[i] && (
               <div className={hover === e.value ? "dateHover" : "invisible"}>
