@@ -330,7 +330,8 @@
 }
 
 .container-step-bar {
-  width: 97%;
+  width: 98%;
+  margin: 0 auto;
 }
 
 @media (max-width: 992px) {
